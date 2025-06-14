@@ -1,0 +1,6 @@
+# @package _global_
+
+defaults:
+  - citation_gravitygae_baseline
+
+training_objective: scalarization

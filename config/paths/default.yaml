@@ -1,0 +1,12 @@
+root_dir: .
+
+# path to data directory
+data_dir: ${paths.root_dir}/data/
+
+# path to output directory, created dynamically by hydra
+# path generation pattern is specified in `configs/main.yaml`
+# use it to store all files generated during the run, like ckpts and metrics
+output_dir: ${hydra:runtime.output_dir}
+
+# path to working directory
+work_dir: ${hydra:runtime.cwd}

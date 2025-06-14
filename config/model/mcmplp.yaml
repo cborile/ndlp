@@ -1,0 +1,12 @@
+defaults:
+  - default
+_target_: models.MPLP.MCMPLP
+model_name: mcmplp
+encoder: 
+  _target_: models.encoders.GCN
+  hidden_channels: 128
+  out_channels: 128
+
+in_channels: 128
+use_degree: "AA"
+feature_combine: "hadamard"

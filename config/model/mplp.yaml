@@ -1,0 +1,12 @@
+defaults:
+  - default
+_target_: models.MPLP.MPLP
+model_name: mplp
+encoder: 
+  _target_: models.encoders.GCN
+  hidden_channels: 64
+  out_channels: 64
+
+in_channels: 64
+use_degree: "mlp"
+feature_combine: "cat"

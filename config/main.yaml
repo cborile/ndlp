@@ -1,0 +1,24 @@
+dataset_name: cora
+defaults:
+  - _self_
+  - dataset: cora
+  - model: gae
+  - trainer: trainer
+  - logger: logger
+  - paths: default
+  # experiment configs allow for version control of specific hyperparameters
+  # e.g. best hyperparameters for given model and datamodule
+  - experiment: null
+
+training_objective: baseline
+num_runs: 5
+random_seed: 42
+base_dir: output/${dataset.dataset_name}/${model.model_name}/${training_objective}/${random_seed}
+
+hydra:
+  # output directory, generated dynamically on each run
+  run:
+    dir: ${base_dir}/runs/${now:%Y-%m-%d}_${now:%H-%M-%S}
+  sweep:
+    dir: ${base_dir}/multiruns/${now:%Y-%m-%d}_${now:%H-%M-%S}
+    subdir: ${hydra.job.num}

@@ -1,0 +1,6 @@
+random_seed: ${random_seed}
+
+optimizer:
+  _target_: torch.optim.Adam
+  _partial_: true
+  lr: 0.01

@@ -1,0 +1,9 @@
+# @package _global_
+
+defaults:
+  - cora_gae_baseline
+  - override /model: mcgravitygae
+
+training_objective: multiclass
+trainer:
+  num_epochs: 2000

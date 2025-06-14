@@ -1,0 +1,5 @@
+# @package _global_
+
+defaults:
+  - citation_gae_baseline
+  - override /model: gravitygae

@@ -1,0 +1,6 @@
+# @package _global_
+
+defaults:
+  - citeseer_gravitygae_baseline
+
+training_objective: scalarization

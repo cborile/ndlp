@@ -1,0 +1,8 @@
+defaults:
+  - default
+_target_: models.DiGAE.DirectedMCGAE
+model_name: mcdigae
+encoder: 
+  _target_: models.encoders.DirectedGCNConvEncoder
+  hidden_channels: 64
+  out_channels: 32

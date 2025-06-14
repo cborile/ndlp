@@ -1,0 +1,9 @@
+# @package _global_
+
+defaults:
+  - citation_gravitygae_baseline
+  - override /model: mcgravitygae
+
+training_objective: multiclass
+trainer:
+  num_epochs: 100

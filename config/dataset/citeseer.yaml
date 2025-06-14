@@ -1,0 +1,4 @@
+defaults:
+  - default
+_target_: datasets.citeseer.CiteseerDataset
+dataset_name: citeseer

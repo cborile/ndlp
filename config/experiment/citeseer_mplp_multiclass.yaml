@@ -1,0 +1,16 @@
+# @package _global_
+
+defaults:
+  - citeseer_mplp_baseline
+  - override /model: mcmplp
+
+training_objective: multiclass
+trainer:
+  num_epochs: 2000
+
+model:
+  encoder: 
+    hidden_channels: 64
+    out_channels: 64
+
+  in_channels: 64

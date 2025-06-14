@@ -1,0 +1,31 @@
+# @package _global_
+
+# Experiment configs allow to overwrite parameters from main config.
+# They can be used to version control best hyperparameters for each combination of model and dataset.
+# To execute this experiment run:
+# python run.py cora_gae_baseline
+
+defaults:
+  - override /dataset: cora
+  - override /model: gae
+  - override /trainer: trainer
+  - override /logger: logger
+
+random_seed: 42
+experiment_name: ${dataset.dataset_name}_${model.model_name}_${training_objective}
+
+dataset:
+  dataset_name: cora
+
+trainer:
+  num_epochs: 1200
+  log_every_n_steps: 1
+  print_every_n_steps: 100
+
+model:
+  optimizer:
+    lr: 0.01
+  encoder:
+    out_channels: 32
+
+base_dir: "output/${experiment_name}/"

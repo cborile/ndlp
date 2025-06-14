@@ -1,0 +1,7 @@
+# @package _global_
+
+defaults:
+  - citeseer_mplp_baseline
+
+training_objective: scalarization
+

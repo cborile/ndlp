@@ -1,0 +1,12 @@
+# @package _global_
+
+defaults:
+  - cora_gae_baseline
+  - override /model: mcdigae
+
+training_objective: multiclass
+trainer:
+  num_epochs: 1200
+  lr: 0.001
+  log_every_n_steps: 1
+  print_every_n_steps: 10

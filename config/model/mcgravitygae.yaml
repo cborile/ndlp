@@ -1,0 +1,8 @@
+defaults:
+  - default
+_target_: models.GravityGAE.GravityMCGAE
+model_name: mcgravitygae
+encoder: 
+  _target_: models.encoders.GCNEncoder
+  hidden_channels: 64
+  out_channels: 32

@@ -1,0 +1,4 @@
+defaults:
+  - default
+_target_: datasets.cora.CoraDataset
+dataset_name: cora

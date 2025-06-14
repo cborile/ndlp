@@ -1,0 +1,5 @@
+# @package _global_
+
+defaults:
+  - cora_gae_baseline
+  - override /model: digae

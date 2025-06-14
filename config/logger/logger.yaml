@@ -1,0 +1,3 @@
+_target_: loggers.logger.MetricsLogger
+save_dir: ${paths.output_dir}
+name: 'results'
